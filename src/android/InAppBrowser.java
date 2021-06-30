@@ -1235,7 +1235,7 @@ public class InAppBrowser extends CordovaPlugin {
                 try{
                     cordova.getActivity().startActivity( intent );
                 }catch( ActivityNotFoundException e ) {
-                    Log.d( SampleApplication.m_strLogTag, "[PayDemoActivity] ActivityNotFoundException=[" + e.getMessage() + "]" );
+                    LOG.e(LOG_TAG, "[PayDemoActivity] ActivityNotFoundException=[" + e.getMessage() + "]" );
                 }
             }
             // If sms:5551212?body=This is the message
