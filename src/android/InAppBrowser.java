@@ -1215,6 +1215,7 @@ public class InAppBrowser extends CordovaPlugin {
                 }
             }
             else if (url.startsWith("intent:")) {
+                Intent intent = null;
                 try {
                     intent = Intent.parseUri( url, Intent.URI_INTENT_SCHEME );
                     override = true;
@@ -1234,7 +1235,7 @@ public class InAppBrowser extends CordovaPlugin {
                 intent = new Intent( Intent.ACTION_VIEW, Uri.parse( intent.getDataString() ) );
                 try{
                     cordova.getActivity().startActivity( intent );
-                }catch( ActivityNotFoundException e ) {
+                }catch( android.content.ActivityNotFoundException e ) {
                     LOG.e(LOG_TAG, "[PayDemoActivity] ActivityNotFoundException=[" + e.getMessage() + "]" );
                 }
             }
