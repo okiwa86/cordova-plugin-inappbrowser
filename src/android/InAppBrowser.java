@@ -84,8 +84,6 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.StringTokenizer;
 
-import kr.co.kcp.android.payment.standard.SampleApplication;
-
 @SuppressLint("SetJavaScriptEnabled")
 public class InAppBrowser extends CordovaPlugin {
 
